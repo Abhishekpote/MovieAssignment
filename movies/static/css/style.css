@@ -1,0 +1,48 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+
+:focus{
+    outline: none !important;
+}
+
+.home-description{
+    border: 1px solid;
+    border-radius: 1rem;
+    border-color: rgb(255, 191, 0);
+    box-shadow: rgb(255, 191, 0) 0px 5px 10px 10px;
+}
+
+
+.login-btn{
+    background-color: black;
+    color: rgb(255, 191, 0);
+    border-radius: 1rem;
+}
+
+.nav-item{
+    color: black;
+    font-weight: 500;
+}
+
+.overview{
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+
+.overview-img{
+    border-radius: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+}
+
+.modal-header{
+    text-align: center;
+}
