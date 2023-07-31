@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{%  load static %}
+{% block content %}
+
+<div class="container">
+
+    <div class="signup-form mt-5">
+
+        <form action="" method="post" style="text-align: center;">
+            {% csrf_token %}
+            <input class="form-field" type="text" name="firstname" placeholder="First Name" required><br>
+            <input class="form-field" type="text" name="lastname" placeholder="Last Name" required><br>
+            <input class="form-field" type="text" name="username" placeholder="Username" required><br>
+            <input class="form-field" type="email" name="email" placeholder="Email" required><br>
+            <input class="form-field" type="password" name="password" id="password" placeholder="Password" required><br>
+
+            <input class="form-btn" type="submit" value="Submit">
+
+        </form>
+
+    </div>
+
+    {% if messages %}
+        {% for message in messages %}
+        <div class="modal-content" id="loginModal">
+            <div class="modal-header">
+                <span class="close-modal">&times;</span>
+                <h2 {% if message.tags %} class="{{ message.tags }}"{% endif %} style="margin-left: auto;margin-right: auto;">{{ message }}</h2>
+            </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+</div>
+
+
+{% endblock content %}

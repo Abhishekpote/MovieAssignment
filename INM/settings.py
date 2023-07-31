@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+LOGOUT_REDIRECT_URL = "/"
 ROOT_URLCONF = 'INM.urls'
 
 TEMPLATES = [
