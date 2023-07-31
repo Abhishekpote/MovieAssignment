@@ -7,11 +7,13 @@
 
         {% for movie in object_list  %}
         <div class="col-lg-4 mt-5">
-            <div class="card" style="width: 18rem; background-color: rgb(255, 191, 0)">
+            <div class="card" style="width: 18rem; background-color: rgb(255, 191, 0); color: black;">
                 <img class="card-img-top" src="{{ movie.thumbnail.url }}" alt="Card Img">
                 <div class="card-body">
                     <h5 class="card-title">{{ movie.title }}</h5>
-                    <p class="card-text">{{ movie.synopsis | slice:"50" }}</p>
+                    <p class="card-text">{{ movie.synopsis | slice:"80" }}....</p>
+                    <p class="card-text">Release Date:{{ movie.released_date }}</p>
+                    <p class="card-text">Genre:{{ movie.genre }}</p>
                     <a href="{% url 'MoviesDetail' movie.slug  %}" class="btn card-btn">Show More</a>
                 </div>
             </div>

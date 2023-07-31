@@ -7,8 +7,11 @@ from django.http import HttpResponse, HttpResponseRedirect, request,Http404
 
 def Home(request):
     try:
-        mov = Movies.objects.all()
-        print(mov)
+        if request.method == "POST":
+            details = request.POST
+            username = details['username']
+            password = details['password']
+            return redirect("/")
         return render(request,'homepage.html')
     except Exception as ex:
         print("Exception in rendering Home page",str(ex))
