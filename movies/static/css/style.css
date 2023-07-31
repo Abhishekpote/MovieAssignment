@@ -46,3 +46,13 @@ body{
 .modal-header{
     text-align: center;
 }
+
+.card-btn{
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+}
+
+.highlights{
+    font-size: 20px;
+}

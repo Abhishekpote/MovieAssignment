@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{%  load static %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+
+        {% for movie in object_list  %}
+        <div class="col-lg-4 mt-5">
+            <div class="card" style="width: 18rem; background-color: rgb(255, 191, 0)">
+                <img class="card-img-top" src="{{ movie.thumbnail.url }}" alt="Card Img">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie.title }}</h5>
+                    <p class="card-text">{{ movie.synopsis | slice:"50" }}</p>
+                    <a href="{% url 'MoviesDetail' movie.slug  %}" class="btn card-btn">Show More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        
+    </div>
+    
+
+</div>
+
+{% endblock content %}
